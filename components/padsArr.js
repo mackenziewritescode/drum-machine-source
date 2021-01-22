@@ -1,12 +1,12 @@
-import clapAudio from "./audio/Clap.wav";
-import hiHat1Audio from "./audio/Hi-Hat 1.wav";
-import hiHat2Audio from "./audio/Hi-Hat 2.wav";
-import tom1Audio from "./audio/Tom 1.wav";
-import tom2Audio from "./audio/Tom 2.wav";
-import tom3Audio from "./audio/Tom 3.wav";
-import kickAudio from "./audio/Kick.wav";
-import snareAudio from "./audio/Snare.wav";
-import fxAudio from "./audio/FX.wav";
+import clapAudio from "../audio/Clap.wav";
+import hiHat1Audio from "../audio/Hi-Hat 1.wav";
+import hiHat2Audio from "../audio/Hi-Hat 2.wav";
+import tom1Audio from "../audio/Tom 1.wav";
+import tom2Audio from "../audio/Tom 2.wav";
+import tom3Audio from "../audio/Tom 3.wav";
+import kickAudio from "../audio/Kick.wav";
+import snareAudio from "../audio/Snare.wav";
+import fxAudio from "../audio/FX.wav";
 
 const padsArr = [
   {

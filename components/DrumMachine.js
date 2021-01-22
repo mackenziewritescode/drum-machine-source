@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./DrumMachine.scss";
+import "../styles/DrumMachine.scss";
 import padsArr from "./padsArr";
 import tracksArr from "./tracksArr";
 import { RiArrowGoBackLine } from "react-icons/ri";
@@ -71,7 +71,6 @@ class Track extends Component {
 }
 
 class TrackPlayer extends Component {
-
   // !!!!!! redundant!
   // eslint-disable-next-line
   constructor(props) {
@@ -135,7 +134,9 @@ class TrackPlayer extends Component {
     ));
     return (
       <div id="trackPlayer">
-        <h3 className="drum-header" id="trackTitle">Background Track</h3>
+        <h3 className="drum-header" id="trackTitle">
+          Background Track
+        </h3>
         {tracks}
       </div>
     );
@@ -198,7 +199,6 @@ class App extends Component {
     this.handleTrack = this.handleTrack.bind(this);
     this.handleVolume = this.handleVolume.bind(this);
   }
-
 
   componentDidMount() {
     document.title = "Beat Machine";
@@ -277,7 +277,9 @@ class App extends Component {
             volumeVal={this.state.volumeVal}
           />
           <div id="controlWrap">
-            <h2 id="title" className="drum-header">Beat Machine</h2>
+            <h2 id="title" className="drum-header">
+              Beat Machine
+            </h2>
             <TrackPlayer
               activeTrack={this.state.activeTrack}
               handleTrack={this.handleTrack}

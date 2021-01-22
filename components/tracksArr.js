@@ -1,6 +1,6 @@
-import track1 from "./audio/track1.wav";
-import track2 from "./audio/track2.wav";
-import track3 from "./audio/track3.wav";
+import track1 from "../audio/track1.wav";
+import track2 from "../audio/track2.wav";
+import track3 from "../audio/track3.wav";
 
 const tracksArr = [
   {
