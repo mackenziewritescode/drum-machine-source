@@ -88,7 +88,7 @@ class App extends Component {
   render() {
     return (
       <div id="drum-wrapper">
-        <a id="drum-portfolio" href="http://www.sunkenworld.com/">
+        <a id="drum-portfolio" href="http://www.sunkenworld.com/#page-3">
           <p id="drum-portfolio-text">
             <RiArrowGoBackLine /> Back to portfolio
           </p>
