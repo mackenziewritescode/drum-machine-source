@@ -5,21 +5,23 @@ $main-font: "Poppins", sans-serif;
 #drum-wrapper {
   display: flex;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   font-family: $main-font;
   margin: 0;
   padding: 0;
   position: fixed;
-  display: flex;
   flex-direction: column;
   left: 0px;
   top: 0px;
   overflow: scroll;
   background: url(bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+  // background-position: top left;
+
+  // background: url(bg.jpg);
 
   .drum-header {
     text-transform: uppercase;
@@ -265,33 +267,43 @@ $main-font: "Poppins", sans-serif;
     }
   }
   @media (max-width: 500px) {
-    #drum-footer {
-      position: absolute;
-      // max-width: 400px;
-      // margin-left: 30px;
-      bottom: 0%;
-      top: 800px;
+    #drum-wrapper {
+      width: 360px;
     }
 
     #drumMachine {
       display: inline-block;
-      position: absolute;
-      top: 30px;
+      position: relative;
+      width: 360px;
+      top: 22px;
       left: 0;
       transform: translate(0, 0);
       border: none;
       border-radius: 0;
       background: rgba(0, 0, 0, 0);
       height: 800px;
+      margin: 0 auto;
 
       #padWrap {
         width: 300px;
         height: 300px;
         margin: 15px auto;
       }
+      #drum-header {
+        width: 360px;
+        margin: 0;
+      }
+      #controlWrap {
+        width: 100%;
+        margin: 0 auto;
+      }
       #title {
         color: rgb(0, 0, 0);
       }
+    }
+    #drum-footer {
+      position: absolute;
+      top: 800px;
     }
   }
   @media (max-height: 600px) and (min-width: 900px) {
