@@ -119,7 +119,6 @@ class App extends Component {
           </div>
         </div>
         <footer id="drum-footer">
-          {/* <p> */}
           This site was made by{" "}
           <a className="footer-link" href="http://www.sunkenworld.com/">
             Mackenzie Charlton
@@ -128,7 +127,7 @@ class App extends Component {
           <a className="footer-link" href="https://reactjs.org">
             React
           </a>
-          .{/* </p> */}
+          .
         </footer>
       </div>
     );
