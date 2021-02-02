@@ -2,42 +2,27 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 $main-font: "Poppins", sans-serif;
 
-#drum-wrapper {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  font-family: $main-font;
+html,
+body {
   margin: 0;
   padding: 0;
+}
+
+#drum-wrapper {
+  display: flex;
   flex-direction: column;
-  left: 0px;
-  top: 0px;
-  overflow: scroll;
-  position: fixed;
-  background: url(bg.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 360px;
+  background: url(bg.jpg);
   background-size: cover;
-
-  // background: url(bg.jpg);
-  // background-size: cover;
-
-  .drum-header {
-    text-transform: uppercase;
-    font-weight: normal;
-    font-style: italic;
-    color: white;
-    font-size: 22px;
-  }
+  font-family: $main-font;
 
   #drum-portfolio {
-    position: absolute;
-    top: -7px;
-    left: 0;
-    display: flex;
-    z-index: 99;
+    align-self: flex-start;
     height: 40px;
+    margin-bottom: 10px;
     width: 230px;
     color: white;
     font-weight: 400;
@@ -58,6 +43,9 @@ $main-font: "Poppins", sans-serif;
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
+    p {
+      margin-top: 10px;
+    }
   }
 
   #drum-portfolio:hover {
@@ -71,20 +59,27 @@ $main-font: "Poppins", sans-serif;
 
   #drumMachine {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
     width: 1000px;
     height: 500px;
     background: rgba(255, 153, 229, 0.6);
     border: 3px solid white;
     border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+    .drum-header {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-style: italic;
+      color: white;
+      font-size: 22px;
+    }
 
     #padWrap {
       width: 400px;
       height: 400px;
-      margin: 50px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -118,22 +113,19 @@ $main-font: "Poppins", sans-serif;
       }
     }
 
-    #controlWrap {
-      //background-color: lightgrey;
+    #title {
       width: 400px;
-      margin: 50px;
+      margin: 30px 0 0 0;
+      text-align: center;
+      font-size: 50px;
+      font-weight: 300;
+      font-style: italic;
+      text-shadow: 7px 7px magenta;
+    }
 
-      #title {
-        width: 100%;
-        margin: 0;
-        display: inline-block;
-        text-align: center;
-        margin-bottom: 10px;
-        font-size: 50px;
-        font-weight: 300;
-        font-style: italic;
-        text-shadow: 7px 7px magenta;
-      }
+    #controlWrap {
+      width: 400px;
+      margin-bottom: 50px;
 
       #trackPlayer {
         width: 50%;
@@ -221,12 +213,7 @@ $main-font: "Poppins", sans-serif;
   #drum-footer {
     color: rgb(119, 119, 119);
     text-align: center;
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    bottom: 0;
-    height: 40px;
-    margin: 0;
+    margin: 12px 10px 6px;
 
     .footer-link {
       text-decoration: none;
@@ -234,84 +221,47 @@ $main-font: "Poppins", sans-serif;
     }
   }
 
-  @media (max-width: 900px) {
-    #drum-wrapper {
-      background: none;
-      -webkit-background-size: none;
-      -moz-background-size: none;
-      -o-background-size: none;
-      background-size: none;
-      //background-image: url(bg.jpg);
-      background-color: black;
-    }
-
-    #drum-footer {
-      position: absolute;
-      // margin-left: 30px;
-      bottom: 0%;
-      top: 1000px;
-    }
+  @media (max-width: 1006px) {
     #drumMachine {
       width: 450px;
       height: 880px;
-      display: inline-block;
-      top: 490px;
-
-      #padWrap {
-        margin: 25px;
-      }
-      #controlWrap {
-        margin: 25px;
-        height: 400px;
-      }
+    }
+    #title {
+      margin: 0;
+      order: 1;
+    }
+    #padWrap {
+      order: 2;
+    }
+    #controlWrap {
+      margin-bottom: 0;
+      order: 3;
     }
   }
   @media (max-width: 500px) {
-    #drum-wrapper {
-      width: 360px;
-    }
-
     #drumMachine {
-      display: inline-block;
-      position: relative;
       width: 360px;
-      top: 22px;
-      left: 0;
-      transform: translate(0, 0);
       border: none;
       border-radius: 0;
       background: rgba(0, 0, 0, 0);
       height: 800px;
-      margin: 0 auto;
 
       #padWrap {
         width: 300px;
         height: 300px;
-        margin: 15px auto;
       }
-      #drum-header {
-        width: 360px;
-        margin: 0;
+      .drum-header {
+        font-size: 20px;
       }
       #controlWrap {
-        width: 100%;
-        margin: 0 auto;
+        width: 300px;
       }
       #title {
+        margin: 0;
+        width: 300px;
+        font-size: 42px;
         color: rgb(0, 0, 0);
       }
-    }
-    #drum-footer {
-      position: absolute;
-      top: 800px;
-    }
-  }
-  @media (max-height: 600px) and (min-width: 900px) {
-    #drumMachine {
-      top: 300px;
-    }
-    #drum-footer {
-      top: 580px;
     }
   }
 }
