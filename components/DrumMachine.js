@@ -98,10 +98,10 @@ class App extends Component {
             handlePad={this.handlePad}
             volumeVal={this.state.volumeVal}
           />
+          <h2 id="title" className="drum-header">
+            Beat Machine
+          </h2>
           <div id="controlWrap">
-            <h2 id="title" className="drum-header">
-              Beat Machine
-            </h2>
             <TrackPlayer
               activeTrack={this.state.activeTrack}
               handleTrack={this.handleTrack}
